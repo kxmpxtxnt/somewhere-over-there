@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = ["shared", "game"]
+
+[workspace.dependencies]
+bevy = "0.19.1"
+avian3d = { version = "0.7.0", features = ["serialize"] }
+bevy_replicon = "0.41"
+bevy_replicon_renet2 = "0.18.0"
+serde = { version = "1.0", features = ["derive"] }
+bevy-steamworks = "0.17.0"
+bevy_skein = "0.6.0"
+bevy_egui = "0.40"
+bevy-inspector-egui = "0.37.0"
+leafwing-input-manager = "0.21.0"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
